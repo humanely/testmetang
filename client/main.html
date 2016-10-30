@@ -1,9 +1,36 @@
+	
 <head>
-  <title>Talking</title>
+  <title data-ng-bind="'Talking Workforce Cloning &amp; Cloning | ' + $state.current.data.pageTitle"></title>
+        <base ng-href="/">
+        <meta charset="utf-8" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="Talking Workforce Cloning &amp; Cloning" name="description" />
+        <meta content="Prabhat Kumar Singh, @prabhatkr" name="author" />
+
+        <link id="ng_load_plugins_before" />
+        <link href="stylesheets/global/css/components.min.css" id="style_components" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="stylesheets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME STYLES -->
+        <link rel="shortcut icon" href="favicon.ico" /> </head>
 </head>
  
-<body>
-  <div class="container" ng-app="simple-todos">
-    <todos-list></todos-list>
-  </div>
+<body ng-app="talkapp" ng-controller="AppController"  class="page-header-fixed page-sidebar-closed-hide-logo page-on-load" ng-class="{'page-content-white': settings.layout.pageContentWhite,'page-container-bg-solid': settings.layout.pageBodySolid, 'page-sidebar-closed': settings.layout.pageSidebarClosed}"> 
+  <!-- BEGIN PAGE SPINNER -->
+        <div ng-spinner-bar class="page-spinner-bar">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+        <!-- END PAGE SPINNER -->
+        <!-- BEGIN HEADER -->
+        <header-list  data-ng-controller="HeaderController" class="page-header navbar navbar-fixed-top"> </header-list>
+        <!-- END HEADER -->
+        <div class="clearfix"> </div>
+        <!-- BEGIN CONTAINER -->
+       <todos-list></todos-list>
 </body>
