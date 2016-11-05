@@ -7,11 +7,9 @@ import template from './header.html';
 
 class HeaderControllera {
 	  'ngInject';
-   constructor($scope,$reactive) {
+   constructor($scope,$window) {
    	$scope.$watch('$includeContentLoaded', function() {
-    	//$window.Layout.initHeader();
-    	alert("ssss")
-    	console.log($reactive)
+    	$window.Layout.initHeader();
     })
   }
 }
